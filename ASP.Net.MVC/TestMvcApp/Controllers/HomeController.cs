@@ -16,9 +16,20 @@ namespace TestMvcApp.Controllers
         //    return View();
         //}
 
-        public string Index()
+        //public string Index()
+        //{
+        //    return "Hello METANIT.COM";
+        //}
+
+        [HttpGet]
+        public string Index() => "Hello METANIT.COM";
+
+        //public string Hello() => "Hello ASP.NET";
+
+        [ActionName("Welcome")]
+        public string Hello()
         {
-            return "Hello METANIT.COM";
+            return "Hello ASP.NET";
         }
     }
 }
