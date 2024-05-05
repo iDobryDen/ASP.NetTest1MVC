@@ -1,8 +1,27 @@
-﻿//using System;
+﻿//using Microsoft.AspNetCore.Mvc;
+
+//namespace MvcApp.Controllers
+//{
+//    public class HomeController : Controller
+//    {
+//        public IActionResult Index()
+//        {
+//            return View();
+//        }
+//    }
+//}
+
+
+
+
+
+
+
+//using System;
 //using System.Collections.Generic;
 //using System.Linq;
 //using System.Threading.Tasks;
-using System;
+//using System;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -11,23 +30,29 @@ namespace TestMvcApp.Controllers
 {
     public class HomeController : Controller
     {
+        //[ActionName("Welcome5")]
+        public IActionResult Index()
+        {
+            return View();
+        }
+
         // GET: /<controller>/
         //public IActionResult Index()
         //{
         //    return View();
         //}
 
-        [ActionName("Welcome3")]
-        public IActionResult Index()
-        {
-            return new HtmlResult("<h2>Hello METANIT.COM!</h2>");
-        }
+        //[ActionName("Welcome3")]
+        //public IActionResult Index()
+        //{
+        //    return new HtmlResult("<h2>Hello METANIT.COM!</h2>");
+        //}
 
-        [ActionName("Welcome4")]
-        public JsonResult GetName()
-        {
-            return Json("Tom");
-        }
+        //[ActionName("Welcome4")]
+        //public JsonResult GetName()
+        //{
+        //    return Json("Tom");
+        //}
 
         //public string Index()
         //{
@@ -57,27 +82,23 @@ namespace TestMvcApp.Controllers
         //[HttpPost]
         //public string Index(string name, int age) => $"{name}: {age}";
 
+        //[ActionName("Welcome")]
+        //public string Hello()
+        //{
+        //    return "Hello ASP.NET";
+        //}
 
-
-
-        [ActionName("Welcome")]
-        public string Hello()
-        {
-            return "Hello ASP.NET";
-        }
-
-        [ActionName("Welcome2")]
-        public async Task Index2()
-        {
-            Response.ContentType = "text/html;charset=utf-8";
-            System.Text.StringBuilder tableBuilder = new("<h2>Request headers</h2><table>");
-            foreach (var header in Request.Headers)
-            {
-                tableBuilder.Append($"<tr><td>{header.Key}</td><td>{header.Value}</td></tr>");
-            }
-            tableBuilder.Append("</table>");
-            await Response.WriteAsync(tableBuilder.ToString());
-        }
+        //[ActionName("Welcome2")]
+        //public async Task Index2()
+        //{
+        //    Response.ContentType = "text/html;charset=utf-8";
+        //    System.Text.StringBuilder tableBuilder = new("<h2>Request headers</h2><table>");
+        //    foreach (var header in Request.Headers)
+        //    {
+        //        tableBuilder.Append($"<tr><td>{header.Key}</td><td>{header.Value}</td></tr>");
+        //    }
+        //    tableBuilder.Append("</table>");
+        //    await Response.WriteAsync(tableBuilder.ToString());
+        //}
     }
 }
-
