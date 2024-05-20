@@ -31,11 +31,16 @@ namespace TestMvcApp.Controllers
     public class HomeController : Controller
     {
         //[ActionName("Welcome5")]
+        //public IActionResult Index()
+        //{
+        //    return View();
+        //}
+
         public IActionResult Index()
         {
+            ViewData["Message"] = "Hello METANIT.COM!!!!!!!!!!!!!!!!";
             return View();
         }
-
         // GET: /<controller>/
         //public IActionResult Index()
         //{

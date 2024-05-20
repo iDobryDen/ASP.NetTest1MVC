@@ -1,4 +1,15 @@
-﻿<!DOCTYPE html>
+﻿@{
+    string head = "Hello METANIT.COM!"; // определяем переменную head
+    string text = "ASP.NET Core Application";   // определяем переменную text
+}
+@{
+    string[] people = { "Tom", "Sam", "Bob" };
+}
+@{
+    ViewData["Title"] = "ASP.NET Core MVC";
+}
+
+<!DOCTYPE html>
 <html>
 <head>
     <title>METANIT.COM</title>
@@ -9,5 +20,15 @@
     <h2>Time: @DateTime.Now.ToShortTimeString()</h2>
     <p>@(20 + 30)</p>
     <p>@@DateTime.Now =@DateTime.Now.ToLongDateString()</p>
+    <h2>@head</h2> <!-- используем переменную head -->
+    <div>@text</div> <!-- используем переменную text -->
+    <ul>
+        @for (var i = 0; i < people.Length; i++)
+        {
+            <li>@people[i]</li>
+        }
+    </ul>
+    <h2>@ViewData["Title"]</h2>
+    <h3>@ViewData["Message"]</h3>
 </body>
 </html>
