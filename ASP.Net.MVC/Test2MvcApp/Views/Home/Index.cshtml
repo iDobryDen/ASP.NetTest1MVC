@@ -4,6 +4,10 @@
 }
 <h3>Index Content</h3>
 
+@await Html.PartialAsync("Hello")
+
+@{await Html.RenderPartialAsync("Hello");} //
+
 @section Footer {
     Copyright© VeryWel.com, @DateTime.Now.Year. All rights reserved
 }
